@@ -19,7 +19,8 @@ public class Ball : MonoBehaviour
         }
 
         if(collision.gameObject.tag == "Floor") {
-            global.OnStart();
+            global.gameOver = true;
+            global.OnStop();
         }
     }
 }

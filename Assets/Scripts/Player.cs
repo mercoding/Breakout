@@ -25,10 +25,16 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(global.gameOver) return;
+        
+
 
         float xInput = Input.GetAxis("Horizontal");
         float yInput = Input.GetAxis("Vertical");
+        
+        if (global.gameOver && yInput > 0) {
+            global.OnStart();
+        }
+        else if(global.gameOver) return;
 
         float xNew = transform.position.x + xInput * inputFaktor * Time.deltaTime;
         if (xNew < -6) xNew = -6;
