@@ -6,6 +6,7 @@ public class Ball : MonoBehaviour
 {
     private Rigidbody2D rb;
     [SerializeField] private Global global;
+    [SerializeField] private  AudioClip collisionBrickAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,7 @@ public class Ball : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision) {
         if(collision.gameObject.tag == "Brick") {
+            AudioSource.PlayClipAtPoint(collisionBrickAudio, transform.position);
             Destroy(collision.gameObject);
         }
 

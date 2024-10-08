@@ -1198,6 +1198,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &808442930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 808442931}
+  m_Layer: 0
+  m_Name: Bricks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &808442931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808442930}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &891198693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,6 +1760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   global: {fileID: 1067794626}
+  collisionBrickAudio: {fileID: 8300000, guid: 7a26f9283e57c42c59806eb147796a38, type: 3}
 --- !u!50 &1655449236
 Rigidbody2D:
   serializedVersion: 4
@@ -1896,9 +1927,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   brickPrefab: {fileID: 1057569578438550, guid: 6fd37629be1bc43f9bfa38ce9ea48c4f,
     type: 3}
-  ball: {fileID: 0}
+  ball: {fileID: 1655449233}
   inputFaktor: 10
   global: {fileID: 1067794626}
+  bricks: {fileID: 808442931}
 --- !u!61 &1854149273
 BoxCollider2D:
   m_ObjectHideFlags: 0
